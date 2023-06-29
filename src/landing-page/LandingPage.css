@@ -1,0 +1,86 @@
+.landing-page {
+  display: flex;
+  flex-direction: row;
+  padding: 0 4em;
+  height: 100vh;
+  overflow-y: hidden; /* Esta linea oculta la barra de scroll vertical*/
+}
+
+.texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60%;
+  align-items: center;
+}
+
+.landing-image-div {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+}
+
+.landing-image-div img {
+  object-fit: contain;
+  max-width: 80%;
+  padding: 1em 3em;
+  margin: 0 auto;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.card {
+  padding: 2em;
+}
+
+/* Animaciones */
+
+.texto {
+  animation-name: from-left;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes from-left {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+    overflow: hidden;
+  }
+  to {
+    transform: translateX(0);
+    margin-left: 0;
+    width: 60%;
+  }
+}
+
+.landing-image-div img {
+  animation-name: from-bottom;
+  animation-duration: 2.1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes from-bottom {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+    overflow: hidden;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 100%;
+  }
+}
+
+@media (max-width:705px){
+  .texto h1 {
+    font-size: 6cqw;
+  }
+}

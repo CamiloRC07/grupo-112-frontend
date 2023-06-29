@@ -1,0 +1,9 @@
+.parties-count p {
+    font-size: 3.1cqw;
+    padding: .5em;
+    color: aquamarine;
+    background-color: #30006B;
+    border: 5px solid #8A2BE2;
+    border-radius: .4em;
+    box-shadow: 0 0 .3em white;
+}

@@ -1,0 +1,17 @@
+.description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.5;
+}
+
+.description div {
+    max-width: 60%;
+}
+
+.description-text {
+    text-align: justify;
+}
+
+
+

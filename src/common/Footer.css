@@ -1,0 +1,14 @@
+footer {
+    font-size: 2cqh;
+    font-weight: 600;
+    padding: 7px 0;
+    background-color: #BFACC8;
+    color: black;
+    margin-top: auto;
+}
+
+#root {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,48 @@
+:root {
+    --hex-height: 200px;
+    --hex-width: calc(1.73 * var(--hex-height) / 2 );
+    --hex-gap: 10px;
+}
+@media (max-width: 960px) {
+    :root {
+        --hex-height: 150px;
+        --hex-width: calc(1.73 * var(--hex-height) / 2 );
+        --hex-gap: 9px;
+    }
+}
+@media (max-width: 740px) {
+    :root {
+        --hex-height: 100px;
+        --hex-width: calc(1.73 * var(--hex-height) / 2 );
+        --hex-gap: 5px;
+    }
+}
+.hexagon-d0  {
+    /*background-color: red;*/
+    height: var(--hex-height);
+    width: var(--hex-width);
+    position: relative;
+    overflow: hidden;
+}
+.hexagon-d1  {
+    /*background-color: blue;*/
+    height: var(--hex-height);
+    width: var(--hex-width);
+    transform: rotate(60deg);
+    overflow: hidden;
+    
+}
+.hexagon-d2  {
+    /*background-color: green;*/
+    height: var(--hex-height);
+    width: var(--hex-width);
+    transform: rotate(60deg);
+    overflow: hidden;
+    
+}
+.hexagon-d2 img {
+    padding-bottom: 0px;
+    height: 100%;
+    transform: rotate(-120deg);
+    
+}

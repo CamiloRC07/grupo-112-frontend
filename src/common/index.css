@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Amarante&display=swap');
+
+:root {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: white;
+  background-color: #1b1b1b;
+}
+
+a {
+  color: #8A2BE2;
+  text-decoration: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+h1 {
+  color: #7FFFD4;
+  font-size: 2.5em;
+  margin: .5em 0 .5em;
+}
+
+.logo-colors {
+  color: #8A2BE2;
+  text-shadow: -.07em .07em .01em #7FFFD4;
+}
+
+.title-colors {
+  color: #8A2BE2;
+  text-shadow: -.1rem .12rem .01em #7FFFD4;
+}
+
+.pretty-font {
+  font-family: 'Amarante';
+}
+
+.title-font {
+  font-family: Copperplate Gothic Bold, Copperplate, serif;
+}
+
+input {
+  background-color: #8A2BE2;
+  color: aquamarine;
+  font-weight: bold;
+}
+
+button {
+  background-color: #8A2BE2;
+  color: aquamarine;
+  font-weight: bold;
+}

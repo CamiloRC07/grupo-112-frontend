@@ -1,0 +1,68 @@
+.about-us {
+    font-family: Courier;
+}
+
+.members {
+    display: grid;
+    grid-template-columns: repeat(2, 35%);
+    justify-content: center;
+}
+
+.member {
+    width: 25cqw;
+    margin: 1.5em auto;
+    padding: 5px 10px;
+    background-color: #7b359e;
+    border: .5em inset seagreen;
+    border-radius: 0 1.5em;
+    box-shadow: 0 0 .5em white;
+    box-sizing: content-box;
+    transition: box-shadow 0.2s;
+}
+
+.member:hover {
+    box-shadow: 0 0 1.5em white;
+}
+
+.member:first-child {
+    border: .5em outset seagreen;
+    border-radius: 1.5em 0;
+}
+
+.member img {
+    margin-top: 1em;
+    max-width: 150px;
+    width: min-content;
+    border: .5em outset seagreen;
+}
+
+.names-color {
+    text-shadow: -.08em .09em .01em #30006B;
+}
+
+#first {
+    border: .5em inset seagreen;
+}
+
+.member h2 {
+    color: #1fbe64;
+    font-size: 3cqh;
+}
+
+.member p {
+    color: #feecea;
+    font-weight: 400;
+}
+
+@media (max-width:900px){
+    .members {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .member {
+        width: 45cqw;
+        min-width: min-content;
+        margin: 1.2em auto;
+    }
+}
