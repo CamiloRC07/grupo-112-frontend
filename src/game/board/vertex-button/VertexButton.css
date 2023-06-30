@@ -8,8 +8,18 @@
     border-radius: 100%;
     border: 1px solid transparent;
     background: transparent;
-    
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
 }
+
+.vertex-button img {
+    opacity: 0;
+    width: 55px;
+    z-index: 101;
+}
+
 @media (max-width: 960px){
     .vertex-button {
         padding: 15px;
@@ -17,6 +27,7 @@
         height: 25px;
     }
 }
+
 @media (max-width: 740px) {
     .vertex-button {
         padding: 10px;
@@ -27,8 +38,14 @@
 
 .vertex-button:hover {
     border-color: #646cff;
-    }
-    .vertex-button:focus,
-    .vertex-button:focus-visible {
-    outline: 4px auto -webkit-focus-ring-color;
-    }
+}
+
+.vertex-button:hover img {
+    opacity: 70%;
+}
+
+
+.vertex-button:focus img,
+.vertex-button:focus-visible img {
+    opacity: 1;
+}

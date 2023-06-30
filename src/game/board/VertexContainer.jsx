@@ -1,6 +1,6 @@
-import VertexButton from "./VertexButton/VertexButton";
+import VertexButton from "./vertex-button/VertexButton";
 import { useContext } from "react";
-import { MiniGameContext } from "../MiniGame";
+import { MiniGameContext } from '../minigame/MiniGame';
 
 export default function VertexContainer({ vertexDistribution }) {
     let vertexColors = [];

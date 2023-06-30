@@ -1,0 +1,29 @@
+.board-and-instructions {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.instructions-and-stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1.5em 1em;
+    border-radius: 20px;
+    background-color: #30006B;
+    width: 30%;
+}
+
+@media (max-width: 570px){
+    .board-and-instructions {
+        flex-direction: column;
+    }
+    .instructions-and-stats {
+        width: 100%;
+        padding-bottom: .7em;
+        margin: 1em 0;
+    }
+    .instruction-text{
+        margin:0 auto;
+    }
+}

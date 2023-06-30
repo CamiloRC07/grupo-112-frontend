@@ -1,12 +1,12 @@
 import "./Instructions.css";
 import { useState } from "react";
-import leftArrow from "../../../public/assets/left-arrow.png";
-import rightArrow from  "../../../public/assets/right-arrow.png";
-import mapImg from  "../../../public/assets/mapImg.png";
-import fTurnImg from  "../../../public/assets/firstTurn.png";
-import sTurnImg from  "../../../public/assets/otherTurns.png";
-import constructionImg from  "../../../public/assets/construction.png";
-import comerceImg from  "../../../public/assets/comerce.png";
+import leftArrow from "../../public/assets/left-arrow.png";
+import rightArrow from  "../../public/assets/right-arrow.png";
+import mapImg from  "../../public/assets/mapImg.png";
+import fTurnImg from  "../../public/assets/firstTurn.png";
+import sTurnImg from  "../../public/assets/otherTurns.png";
+import constructionImg from  "../../public/assets/construction.png";
+import comerceImg from  "../../public/assets/comerce.png";
 
 import { useNavigate } from "react-router-dom";
 

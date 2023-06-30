@@ -1,10 +1,10 @@
-import Hexagon from "./Hexagon/Hexagon"
-import ArcillaImg from "../../../../public/assets/ArcillaTile.jpg";
-import SheepsImg from "../../../../public/assets/SheepsTile.jpg";
-import ForestImg from "../../../../public/assets/ForestTile.jpg";
-import TrigoImg from "../../../../public/assets/TrigoTile.jpg";
-import DesertImg from "../../../../public/assets/DesertTile.jpg";
-import MountainImg from "../../../../public/assets/mountainTile.jpg";
+import Hexagon from "./hexagon/Hexagon"
+import ArcillaImg from "../../../public/assets/ArcillaTile.jpg";
+import SheepsImg from "../../../public/assets/SheepsTile.jpg";
+import ForestImg from "../../../public/assets/ForestTile.jpg";
+import TrigoImg from "../../../public/assets/TrigoTile.jpg";
+import DesertImg from "../../../public/assets/DesertTile.jpg";
+import MountainImg from "../../../public/assets/mountainTile.jpg";
 
 export default function HexContainer({ HexDistribution }){
     const getRandomImgSrc = () => {

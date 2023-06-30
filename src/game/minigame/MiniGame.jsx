@@ -1,8 +1,8 @@
-import Board from "./Board/Board";
+import Board from "../board/Board";
 import { createContext, useState, useEffect } from "react";
 import "./MiniGame.css"
-import findVertexByIndex from "./findVertexByIndex";
-import getRandomHexDistribution from "./getRandomHexDistribution";
+import findVertexByIndex from "../findVertexByIndex";
+import getRandomHexDistribution from "../getRandomHexDistribution";
 
 export const MiniGameContext = createContext();
 export default function MiniGame(){
@@ -82,7 +82,6 @@ export default function MiniGame(){
         } 
     }, [vertexClicked]);
     return (
-        <>
         <MiniGameContext.Provider value={{
             id: selectedVertexToGuess,
             color: "green",
@@ -105,6 +104,5 @@ export default function MiniGame(){
                 </div>
             </div>
         </MiniGameContext.Provider>
-        </>
     );
 }
