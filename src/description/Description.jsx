@@ -19,7 +19,7 @@ function Description() {
                 </p>
             </div>
 
-            <LetsPlayButton/>
+            <LetsPlayButton message={'Comienza tu aventura para convertirte en maestro conquistador de Cathay.'}/>
 
             <PartiesCount/>
 

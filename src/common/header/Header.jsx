@@ -1,6 +1,18 @@
+import { useContext } from "react"
 import "./Header.css"
+import { AuthContext } from "../../auth/AuthContext"
+
 
 function Header() {
+
+    const { status } = useContext(AuthContext);
+    
+
+    const isSessionOpen = () => {
+        return status;
+    }
+
+
     return (
         <header>
             <div className="logo-header">
@@ -12,7 +24,8 @@ function Header() {
                 <a href="/game-rooms" className="nav-link">Let's Play</a>
                 <a href="/instructions" className="nav-link">Instructions</a>
                 <a href="/about-us" className="nav-link">About us</a>
-                <a href="/login" className="nav-link">Log in</a>
+                {!isSessionOpen() && <a href="/login" className="nav-link">Log in</a>}
+                {isSessionOpen() && <a href="/profile" className="nav-link">Perfil</a>}
             </nav>
         </header>
     )

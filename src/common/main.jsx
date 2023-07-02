@@ -9,10 +9,11 @@ import AuthProvider from '../auth/AuthProvider'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
 
-    <Header/>
     <AuthProvider>
+      <Header/>
       <Routing />
     </AuthProvider>
     <Footer/>
+
   </React.StrictMode>,
 )

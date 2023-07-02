@@ -14,6 +14,17 @@
     width: 30%;
 }
 
+.room-data {
+    display: flex;
+    justify-content: center;
+}
+
+.room-data * {
+    padding: 12px 6px;
+    min-width: 200px;
+    border: #7a2cd8 1px solid;
+}
+
 @media (max-width: 570px){
     .board-and-instructions {
         flex-direction: column;
