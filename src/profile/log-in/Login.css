@@ -1,5 +1,5 @@
-.form-box{
-    margin: 0 auto;
+.login-content{
+    margin: auto;
     width: fit-content;
     background-color: #30006B;
     color: #7FFFD4;
@@ -16,9 +16,16 @@ form *{
     display: flex;
     gap: 15px;
 }
+label {
+    display: flex;
+    justify-content: space-between;
+}
 
 .username-box input, .pass-box input {
     border: .1em ridge #7FFFD4;
+}
+button {
+    margin: auto;
 }
 
 .log-in-button {

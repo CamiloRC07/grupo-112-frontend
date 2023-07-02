@@ -5,13 +5,14 @@ import API_URL from '../common/config' ;
 import { AuthContext } from "../auth/AuthContext";
 import RoomData from "./RoomData";
 import GameRoomView from "./GameRoomView";
+import AlertMessage from "../common/alert-message/AlertMessage";
 
 export const GameRoomContext = createContext();
 
 function GameRoomsList() {
 
     // status: Booleano sobre sesión iniciada o no, token: para hacer solicitudes a la API
-    const { status, token } = useContext(AuthContext);
+    const { status, token, alertMessage, setAlertMessage } = useContext(AuthContext);
     const [gameRooms, setGameRooms] = useState([]);
     const [gameRoomData, setGameRoomData] = useState(null);
     const [id, setId] = useState(null);
@@ -49,10 +50,12 @@ function GameRoomsList() {
             .then(response => {
                 const gameRoom = response.data;
                 setId(gameRoom.GameRoom.id);
+                getGameRoom();
                 // moverse a la vista unica de GameRoom id=GameRoomContextId
             })
             .catch(error => {
                 console.log(error);
+                setAlertMessage('No puedes crear salas sin sesión')
             })
     }
 
@@ -68,10 +71,12 @@ function GameRoomsList() {
             .then(response => {
                 console.log(response.data);
                 setId(idGameRoomToJoin);
+                getGameRoom();
                 // moverse a la vista unica de GameRoom id=GameRoomContextId
             })
             .catch(error => {
                 console.log(error);
+                setAlertMessage('Error al unirse');
             })
     }
 
@@ -86,8 +91,8 @@ function GameRoomsList() {
         axios(config)
             .then(response => {
                 setGameRoomData(response.data);
-                console.log(gameRoomData);
-                setId(response.data.id)
+                console.log(response.data);
+                setId(response.data.gameroom.id)
             })
             .catch(error => {
                 console.log(error);
@@ -96,14 +101,13 @@ function GameRoomsList() {
 
     useEffect(() => {
         getGameRoom();
-        if (gameRoomData !== null) {
-            setId(gameRoomData.id)
-        }
+
         getGameRoomList()
     }, []);
 
     return (
-        <GameRoomContext.Provider value={{ id, gameRoomData, setId, getGameRoomList, joinGameRoom}}>
+        <GameRoomContext.Provider value={{ id, gameRoomData, setId, getGameRoomList, joinGameRoom, getGameRoom}}>
+            <AlertMessage message={alertMessage}></AlertMessage>
             {(id === null) && 
                 <div className="gameroom-content">
                     <h1 className="pretty-font title-colors">Crear o unirse a una sala de juego</h1>

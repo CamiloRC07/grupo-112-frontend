@@ -16,6 +16,7 @@ function Register() {
         <div className="signup-content">
             {!status && 
                 <div className="to-signup">
+                    <h2>Registrarse</h2>
                     <form onSubmit={event => {
                         event.preventDefault();
 
@@ -58,7 +59,7 @@ function Register() {
                                 onChange={event => setName(event.target.value)}
                                 autoComplete='off'
                             />
-                        </label>
+                        </label><br />
                         <label>Email:
                                 <input
                                     type="email"
@@ -67,7 +68,7 @@ function Register() {
                                     value={email}
                                     onChange={event => setEmail(event.target.value)}
                                     autoComplete='off'
-                            /></label>
+                            /></label><br />
                             <label>Password:
                                 <input
                                     type="password"
@@ -76,7 +77,7 @@ function Register() {
                                     value={password}
                                     onChange={event => setPassword(event.target.value)}
                                 />
-                            </label>
+                            </label><br />
                         <button type="submit">Registrar usuario</button>
                     </form>
                 </div>}

@@ -12,22 +12,24 @@ export default function HexContainer({ HexDistribution }){
         return imgs[Math.floor(Math.random() * 6)];
     }
     const getImgSrc = (id) => {
-        switch (HexDistribution[id]) {
-            case "Arcilla":
-                return ArcillaImg;
-            case "Sheeps":
-                return SheepsImg;
-            case "Forest":
-                return ForestImg;
-            case "Trigo":
-                return TrigoImg;
-            case "Desert":
-                return DesertImg;
-            case "Mountain":
-                return MountainImg;
-            default:
-                return getRandomImgSrc();
-        }
+        try {
+            switch (HexDistribution[id].type) {
+                case 2:
+                    return ArcillaImg;
+                case 4:
+                    return SheepsImg;
+                case 3:
+                    return ForestImg;
+                case 5:
+                    return TrigoImg;
+                case 0:
+                    return DesertImg;
+                case 1:
+                    return MountainImg;
+                default:
+                    return getRandomImgSrc();
+            }
+        } catch (error) {}
     }
     return (
         <div className="hex-container">

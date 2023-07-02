@@ -1,3 +1,4 @@
+import './Profile.css'
 import { useContext, useEffect, useState } from "react"
 import LogOutButton from "./log-out/LogOutButton"
 import { AuthContext } from "../auth/AuthContext"

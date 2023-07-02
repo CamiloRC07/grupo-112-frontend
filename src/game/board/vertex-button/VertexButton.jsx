@@ -30,11 +30,12 @@ export default function VertexButton({ id, xPos, yPos, color }){
         if (miniGameContext != null){
             miniGameContext.saveVertex({id: id, xPos: xPos, yPos: yPos});
         } 
-        if (gameContext != null){
+        if (gameContext !== null){
             gameContext.saveVertex({id: id, xPos: xPos, yPos: yPos});
             setVertex({
                 background: 'red'
             })
+            gameContext.handleVertexClick({id: id, xPos: xPos, yPos: yPos});
         } else {
             setVertex({
                 background: "red"

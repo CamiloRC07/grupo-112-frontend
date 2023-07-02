@@ -16,6 +16,7 @@ export default function Login(){
         <div className="login-content">
             {!status && 
             <div className="to-login">
+                <h2>Ingresar</h2>
                 <form onSubmit={event => {
                     event.preventDefault();
 
@@ -44,7 +45,7 @@ export default function Login(){
                             value={email}
                             onChange={event => setEmail(event.target.value)}
                             autoComplete='off'
-                    /></label>
+                    /></label><br />
                     <label>Password:
                         <input
                             type="password"
@@ -53,8 +54,8 @@ export default function Login(){
                             value={password}
                             onChange={event => setPassword(event.target.value)}
                         />
-                    </label>
-                    <button type="submit">Iniciar sesión</button>
+                    </label><br />
+                    <button type="submit">Iniciar sesión</button><br />
                 </form>
                 <a href="/register" className="sing-up-link">¿No tienes una cuenta? Crea una aquí.</a>
             </div>}
