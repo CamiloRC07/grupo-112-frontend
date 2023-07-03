@@ -11,12 +11,9 @@ export const GameContext = createContext();
 
 function Game() {
 
+    const userId = 0;
     const { token, alertMessage, setAlertMessage } = useContext(AuthContext);
-
-    // variables del contexto de Game Room
-    const userId = 1;
-    const gameId = 3;
-    // fin
+    const [gameId, setGameId] = useState(null);
 
     const [typePiece, setTypePiece] = useState(null);
     const [canBuild, setCanBuild] = useState(false);
@@ -35,6 +32,24 @@ function Game() {
     const [hexDistribution, SetHexDistribution] = useState({})
     const [vertexClicked, setVertexClicked] = useState(null);
     const [edgeClicked, setEdgeClicked] = useState(null);
+
+    async function getGameId() {
+        const config = {
+            method: 'get',
+            url: `${API_URL}/game/my/game`,
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        }
+        axios(config)
+            .then(response => {
+                console.log(response.data);
+                setGameId(response.data);
+            })
+            .catch(error => {
+                console.log(error);
+            })
+    }
 
     async function getGameStatus(UserId, GameId) {
         const config = {
@@ -260,15 +275,11 @@ function Game() {
             })
     }
 
-    useEffect( () => { getUserInfo() }, [])
+    useEffect( () => { getUserInfo(); getGameId(); }, [])
 
     useEffect( () => {
         getGameStatus(userId, gameId);
-    }, [user])
-    
-
-    // useEffect( () => {console.log(vertexClicked)} , [vertexClicked])
-
+    }, [user, gameId])
     return (
         <GameContext.Provider value={{
             vertexClicked,

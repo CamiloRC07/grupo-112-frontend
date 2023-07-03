@@ -3,9 +3,13 @@
 La página se encuentra disponible en `https://conquer-of-cathay.netlify.app`, servida mediante Netlify. Disponible en todo internet.
 
 ## Levantar la aplicación en Netlify
-Crearse una cuenta en Netlify y agregar el enlace del repositorio (..repositorio personal)
+Crearse una cuenta en Netlify y realizar una copia del proyecto en un repositorio personal
 
-## Correr el proyecto en locao
+Darle permisos a Netlify para que acceder al repositorio recien creado.
+
+Dejar las configuraciones por defecto y el deploy está listo.
+
+## Correr el proyecto en local
 🧬 Para correr el proyecto, deberás clonar el repositorio, y en la carpeta padre ejecutar el comando de consola:
 
 ```bash
